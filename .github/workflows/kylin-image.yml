@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Publish Kylin V10 Docker image
 
 on:
   workflow_dispatch:
