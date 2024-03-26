@@ -1,0 +1,109 @@
+[UnionTechOS-$releasever-OS]
+name = UnionTechOS $releasever OS
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/OS/$basearch
+enabled = 1
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/OS/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-everything]
+name = UnionTechOS $releasever everything
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/everything/$basearch
+enabled = 1
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/everything/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-UFU]
+name = UnionTechOS $releasever UFU
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/UFU/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/UFU/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-update]
+name = UnionTechOS $releasever update
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/update/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/update/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-Modular]
+name = UnionTechOS $releasever Modular
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/Modular/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/Modular/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-Kernel510]
+name = UnionTechOS $releasever Kernel510
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/kernel510/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/kernel510/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-CRITC]
+name = UnionTechOS $releasever CRITC
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/CRITC/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/CRITC/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-GM]
+name = UnionTechOS $releasever UFU
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/GM/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/GM/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-cdh6]
+name = UnionTechOS $releasever cdh6
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/cdh6/$basearch/RPM-GPG-KEY-UnionTech
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/cdh6/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-military]
+name = UnionTechOS $releasever military
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/military/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/military/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
+
+[UnionTechOS-$releasever-openstack]
+name = UnionTechOS $releasever openstack
+baseurl = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/openstack/$basearch
+enabled = 0
+gpgcheck = 1
+skip_if_unavailable = 1
+gpgkey = https://euler-packages.chinauos.com/server-euler/ufu/fuyu/$releasever/openstack/$basearch/RPM-GPG-KEY-UnionTech
+username=$auth_u
+password=$auth_p
