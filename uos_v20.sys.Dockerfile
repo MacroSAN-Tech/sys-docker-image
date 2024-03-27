@@ -10,16 +10,18 @@ ARG OS_DIFF
 
 # 统信服务器操作系统【ADE版本】区别介绍 https://faq.uniontech.com/solution/umountain/3984/2e19
 RUN echo "I'm building uos:v20-${OS_DIFF} for arch ${TARGETARCH}"
-RUN rm -rf /target && mkdir -p /target/etc/yum.repos.d
+RUN rm -rf /target && mkdir -p /target/etc/yum.repos.d && mkdir -p /target/etc/yum/vars
 
 # https://faq.uniontech.com/sever/sysmain/8742
-COPY UnionTechOS-ufu.repo /target/etc/yum.repos.d/UnionTechOS-ufu.repo
+COPY UnionTechOS-ufu.repo /target/etc/yum.repos.d/UnionTechOS-tmp.repo
+RUN echo 'ufu' > /target/etc/yum/vars/StateMode
 
 # python3 -c 'import dnf, pprint; db = dnf.dnf.Base(); pprint.pprint(db.conf.substitutions,width=1)'
 RUN yum --installroot=/target \
     --releasever=${OS_DIFF} \
     --setopt=tsflags=nodocs \
-    install -y UnionTech-release coreutils rpm yum bash procps tar
+    install -y UnionTech-release UnionTech-repos coreutils rpm yum bash procps tar && \
+    rm -rf /target/etc/yum.repos.d/UnionTechOS-tmp.repo
 
 FROM scratch as runner
 ARG OS_DIFF
