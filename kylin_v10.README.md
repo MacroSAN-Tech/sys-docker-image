@@ -1,17 +1,17 @@
 # Quick reference
 
-[![Publish Docker image](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/actions/workflows/docker-image.yml/badge.svg)](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/actions/workflows/docker-image.yml)
+[![Publish Docker image](https://github.com/MacroSAN-Tech/sys-docker-image/actions/workflows/kylin-image.yml/badge.svg)](https://github.com/MacroSAN-Tech/sys-docker-image/actions/workflows/kylin-image.yml)
 
 银河麒麟高级服务器操作系统V10系统docker镜像, 基于kylin软件源构建
 
 -	**Maintained by**:  
-	[MacroSAN-Tech/kylin-sys-docker-image](https://github.com/MacroSAN-Tech/kylin-sys-docker-image)
+	[MacroSAN-Tech/sys-docker-image](https://github.com/MacroSAN-Tech/sys-docker-image)
 
 # Supported tags and respective `Dockerfile` links
 
--	[`v10-sp1`](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
--	[`v10-sp2`](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
--	[`v10-sp3`](https://github.com/MacroSAN-Tech/kylin-sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp1`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp2`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp3`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
 
 # Quick reference (cont.)
 
