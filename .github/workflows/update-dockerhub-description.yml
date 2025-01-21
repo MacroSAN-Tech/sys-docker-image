@@ -10,9 +10,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Update repo description
+
+      - name: Update kylin repo description
         uses: peter-evans/dockerhub-description@v4
         with:
           username: ${{ vars.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          readme-filepath: kylin_v10.README.md
           repository: ${{ vars.DOCKER_USERNAME }}/kylin
+
+      - name: Update uos repo description
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ vars.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          readme-filepath: uos_v20.README.md
+          repository: ${{ vars.DOCKER_USERNAME }}/uos
