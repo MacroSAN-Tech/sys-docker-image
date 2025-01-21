@@ -12,6 +12,7 @@
 -	[`v10-sp1`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
 -	[`v10-sp2`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
 -	[`v10-sp3`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
+-	[`v10-sp3-2403`](https://github.com/MacroSAN-Tech/sys-docker-image/blob/main/kylin_v10.sys.Dockerfile)
 
 # Quick reference (cont.)
 
@@ -40,6 +41,15 @@ RUN yum install -y vi
 ```
 
 # Image Variants
+
+## macrosan/kylin:v10-sp3-2403
+```
+bash-5.0# cat /etc/.productinfo
+Kylin Linux Advanced Server
+release V10 SP3 2403/(Halberd)-x86_64-Build20/20240426
+bash-5.0# rpm -q kylin-release
+kylin-release-10-24.6.p195.ky10.x86_64
+```
 
 ## macrosan/kylin:v10-sp3
 ```

@@ -2,12 +2,39 @@ name: Publish Kylin V10 Docker image
 
 on:
   workflow_dispatch:
+    inputs:
+      sp_ver:
+        description: 'SP version'
+        required: true
+        type: choice
+        options:
+          - all
+          - sp1
+          - sp2
+          - sp3
+          - sp3-2403
+      push:
+        description: 'Push to Docker Hub'
+        type: boolean
 
 jobs:
-  build_and_push:
+  setup:
+    runs-on: ubuntu-22.04
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - id: set-matrix
+        run: |
+          if [[ "${{ inputs.sp_ver }}" == "all" ]]; then
+            echo "matrix=[{\"sp_ver\":\"sp1\"},{\"sp_ver\":\"sp2\"},{\"sp_ver\":\"sp3\"},{\"sp_ver\":\"sp3-2403\"}]" >> $GITHUB_OUTPUT
+          else
+            echo "matrix=[{\"sp_ver\":\"${{inputs.sp_ver}}\"}]" >> $GITHUB_OUTPUT
+          fi
+  build:
+    needs: [setup]
     strategy:
       matrix:
-        SP_VERSION: [1, 2, 3]
+        include: ${{ fromJSON(needs.setup.outputs.matrix) }}
 
     name: Build and push
     runs-on: ubuntu-22.04
@@ -31,7 +58,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           context: .
           build-args: |
-            SP_VERSION=${{ matrix.SP_VERSION }}
+            SP_VERSION=${{ matrix.sp_ver }}
           file: ./kylin_v10.sys.Dockerfile
-          push: true
-          tags: ${{ vars.DOCKER_USERNAME }}/kylin:v10-sp${{ matrix.SP_VERSION }}
+          push: ${{ inputs.push }}
+          tags: ${{ vars.DOCKER_USERNAME }}/kylin:v10-${{ matrix.sp_ver }}
