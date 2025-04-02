@@ -7,7 +7,7 @@ jobs:
   build_and_push:
     strategy:
       matrix:
-        OS_DIFF: [1050,1060]
+        OS_DIFF: [1070]
 
     name: Build and push
     runs-on: ubuntu-22.04

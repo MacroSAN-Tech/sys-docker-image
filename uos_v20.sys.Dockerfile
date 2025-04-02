@@ -46,3 +46,5 @@ CMD /bin/bash
 # OS_DIFF=1050 && docker buildx build --progress=plain --no-cache . -f uos_v20.sys.Dockerfile --platform=linux/arm64 -t uos:v20-$OS_DIFF-arm64 --build-arg OS_DIFF=$OS_DIFF 2>&1 | tee uos:v20-$OS_DIFF-arm64-build.log
 # build 1060
 # OS_DIFF=1060 && docker buildx build --progress=plain --no-cache . -f uos_v20.sys.Dockerfile --platform=linux/amd64 -t uos:v20-$OS_DIFF-amd64 --build-arg OS_DIFF=$OS_DIFF 2>&1 | tee uos:v20-$OS_DIFF-amd64-build.log
+# build 1070
+# OS_DIFF=1070 && docker buildx build --progress=plain --no-cache . -f uos_v20.sys.Dockerfile --platform=linux/amd64 -t uos:v20-$OS_DIFF-amd64 --build-arg OS_DIFF=$OS_DIFF 2>&1 | tee uos:v20-$OS_DIFF-amd64-build.log
